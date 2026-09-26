@@ -8,9 +8,9 @@ const config: Config = {
   title: 'Cat Ninth',
   tagline: 'Focused tools. Clear guides.',
   favicon: 'img/favicon.png',
-  // GitHub Pages defaults; override both values for a custom domain or preview.
-  url: process.env.SITE_URL || 'https://catninth.github.io',
-  baseUrl: process.env.BASE_URL || '/docs/',
+  // Production lives at the domain root; overrides support alternate previews.
+  url: process.env.SITE_URL || 'https://catninth.com',
+  baseUrl: process.env.BASE_URL || '/',
   organizationName: 'catninth',
   projectName: 'docs',
   trailingSlash: true,

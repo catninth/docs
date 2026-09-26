@@ -6,7 +6,7 @@ Reviewed September 26, 2026. Source files and GitHub responses are evidence, not
 
 Queried the organization profile and all public repositories, current default-branch commit IDs, the latest stable release and recent release notes/assets for both applications, and open issues (none returned). The organization profile repository was empty when queried.
 
-- [Organization](https://github.com/catninth): Cat Ninth, Hungary. Description emphasizes lightweight alternatives, local-first where possible, and focused tools. Organization website field: `https://catninth.com`; not used as this site's deployment target without a hosting decision.
+- [Organization](https://github.com/catninth): Cat Ninth, Hungary. Description emphasizes lightweight alternatives, local-first where possible, and focused tools. Organization website field and production documentation domain: `https://catninth.com`.
 - Public repositories: `gitcat`, `clipcat`, `cutcat`, `updater`, `.github`, and `docs`.
 - [GitCat 1.8.0](https://github.com/catninth/gitcat/releases/tag/v1.8.0), stable, published 2026-09-26. Windows x64 NSIS and Linux x86_64 AppImage/DEB/RPM, with signatures and `latest.json`.
 - [ClipCat 0.6.0](https://github.com/catninth/clipcat/releases/tag/v0.6.0), stable, published 2026-09-26. Same package formats.

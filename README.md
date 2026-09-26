@@ -11,7 +11,7 @@ npm ci
 npm start
 ```
 
-The default site path is `http://localhost:3000/docs/`. Local search is generated for production builds, so verify search with:
+The default site path is `http://localhost:3000/`. Local search is generated for production builds, so verify search with:
 
 ```sh
 npm run typecheck
@@ -61,11 +61,13 @@ See the [official Docusaurus i18n guide](https://docusaurus.io/docs/i18n/introdu
 
 ## Hosting
 
-Default production configuration targets `https://catninth.github.io/docs/`. No custom domain is assumed and no deployment is triggered by a normal push.
+Production is hosted on Vercel at `https://catninth.com/`. The default Docusaurus configuration uses `url: 'https://catninth.com'` and `baseUrl: '/'`, so assets, navigation, search indexes, and canonical URLs resolve from the domain root.
 
-After merging the site, enable **Settings > Pages > Source: GitHub Actions**, then manually run **Publish GitHub Pages**. The workflow builds `main` and publishes its artifact. Configure a custom domain only after verifying ownership and DNS, then update the workflow environment / configuration accordingly.
+Use `npm run build` as the Vercel build command and `build` as the output directory. Rebuild and redeploy after changing the site URL or base path; these values are embedded in the generated files. Remove outdated `SITE_URL` / `BASE_URL` environment overrides in Vercel, or set them to `https://catninth.com` and `/` respectively.
 
-`SITE_URL` and `BASE_URL` can override the defaults. Set both when changing the hosting location (for example, `SITE_URL=https://docs.example.com` and `BASE_URL=/`). All internal app links and images honor Docusaurus's base URL.
+`SITE_URL` and `BASE_URL` remain available for alternate hosting locations. For a GitHub Pages project preview, use `SITE_URL=https://catninth.github.io` and `BASE_URL=/docs/`. All internal app links and images honor Docusaurus's base URL.
+
+The optional **Publish GitHub Pages** workflow is manually triggered and builds `main`. To use it, configure **Settings > Pages > Source: GitHub Actions** and set the build environment to the intended Pages URL and base path. This workflow does not deploy to Vercel.
 
 ## Maintaining accuracy
 
@@ -75,6 +77,6 @@ Use real application screenshots, include descriptive alt text, and identify pre
 
 After replacing the supplied logo or a home page screenshot, run `npm run optimize:images` and commit the generated serving derivatives. The originals remain available for full-size documentation images and future captures.
 
-For a project site under `/docs/`, search engines read `robots.txt` from the domain root. The included static file works directly on root deployments; an organization-level GitHub Pages site controls the root file when using a subpath. Docusaurus's local subpath server redirects root requests, which can cause a Lighthouse robots.txt warning that does not describe the generated file.
+The included `static/robots.txt` is published at the domain root. If using an alternate deployment under a subpath, its domain-root site must provide `robots.txt` instead.
 
 Overrides select patched `serialize-javascript` and SockJS's `uuid` dependencies. SockJS uses the compatible CommonJS `v4()` API. Recheck these overrides during Docusaurus upgrades. Never use `npm audit fix --force` without reviewing its proposed framework downgrade or major dependency changes.
