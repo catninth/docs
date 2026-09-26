@@ -1,0 +1,9 @@
+node_modules/
+build/
+.docusaurus/
+.cache-loader/
+.playwright/
+.playwright-cli/
+output/
+*.log
+.DS_Store

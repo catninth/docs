@@ -1,0 +1,140 @@
+/* Docusaurus / Infima foundation. Native Cat Ninth palette and system type.
+ * Design dials: variance 5, motion 3, density 4. Feedback, no decorative motion.
+ * Radii: controls 8px, product containers 16px. Docusaurus owns overlay layers.
+ */
+:root {
+  --ifm-color-primary: #08795d;
+  --ifm-color-primary-dark: #066d54;
+  --ifm-color-primary-darker: #06674f;
+  --ifm-color-primary-darkest: #045541;
+  --ifm-color-primary-light: #098565;
+  --ifm-color-primary-lighter: #0a8b6b;
+  --ifm-color-primary-lightest: #0b9d79;
+  --ifm-background-color: #fafbfc;
+  --ifm-background-surface-color: #fff;
+  --ifm-font-color-base: #252a34;
+  --ifm-font-family-base: 'Segoe UI Variable Text', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-font-family-monospace: 'Cascadia Code', 'SFMono-Regular', Consolas, monospace;
+  --ifm-heading-font-family: 'Segoe UI Variable Display', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-heading-font-weight: 650;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.75;
+  --ifm-navbar-height: 68px;
+  --ifm-navbar-background-color: rgb(250 251 252 / .94);
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: #f1f3f5;
+  --ifm-footer-color: #555d6a;
+  --ifm-footer-link-color: #555d6a;
+  --ifm-footer-title-color: #252a34;
+  --ifm-menu-color: #5f6875;
+  --ifm-menu-color-background-active: #e5f3ed;
+  --ifm-menu-color-background-hover: #eef1f4;
+  --ifm-toc-border-color: #e1e5e9;
+  --ifm-code-font-size: 87%;
+  --ifm-code-border-radius: 5px;
+  --ifm-global-radius: 8px;
+  --doc-sidebar-width: 270px;
+  --cn-surface: #fff;
+  --cn-muted: #646d7a;
+  --cn-border: #e0e4e8;
+  --cn-border-hover: #b8c4ca;
+  --cn-border-soft: #eceff2;
+  --cn-orbit: #f6f8fa;
+  --cn-hover: #f0f3f5;
+  --cn-accent-ink: #fff;
+  --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / .06);
+  --search-local-modal-background: var(--ifm-background-surface-color);
+  --search-local-modal-highlight-background: var(--cn-hover);
+  --search-local-hit-color: var(--ifm-font-color-base);
+  --search-local-highlight-color: var(--ifm-color-primary);
+  --search-local-muted-color: var(--cn-muted);
+  --search-local-hit-active-color: var(--cn-accent-ink);
+}
+:root[data-theme='dark'] {
+  --ifm-color-primary: #58d5b0;
+  --ifm-color-primary-dark: #3bcea3;
+  --ifm-color-primary-darker: #2dcb9c;
+  --ifm-color-primary-darkest: #28ad85;
+  --ifm-color-primary-light: #75dcbd;
+  --ifm-color-primary-lighter: #83dfc4;
+  --ifm-color-primary-lightest: #aeeada;
+  --ifm-background-color: #14171c;
+  --ifm-background-surface-color: #1b1f26;
+  --ifm-font-color-base: #edf0f4;
+  --ifm-navbar-background-color: rgb(20 23 28 / .94);
+  --ifm-footer-background-color: #111419;
+  --ifm-footer-color: #a0a8b5;
+  --ifm-footer-link-color: #a0a8b5;
+  --ifm-footer-title-color: #edf0f4;
+  --ifm-menu-color: #a2aab6;
+  --ifm-menu-color-background-active: #203931;
+  --ifm-menu-color-background-hover: #232830;
+  --ifm-toc-border-color: #2a3039;
+  --cn-surface: #1a1e25;
+  --cn-muted: #a0a9b7;
+  --cn-border: #303640;
+  --cn-border-hover: #53616b;
+  --cn-border-soft: #232830;
+  --cn-orbit: #171b21;
+  --cn-hover: #20262e;
+  --cn-accent-ink: #10271f;
+  --docusaurus-highlighted-code-line-bg: rgb(255 255 255 / .07);
+}
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { -webkit-font-smoothing: antialiased; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--ifm-color-primary); outline-offset: 4px; }
+.navbar { border-bottom: 1px solid var(--cn-border-soft); backdrop-filter: blur(18px); padding: 0 30px; }
+.navbar__inner { max-width: 1320px; margin: 0 auto; }
+.navbar__brand { margin-right: 30px; gap: 5px; }
+.navbar__title { font-size: 17px; font-weight: 650; letter-spacing: -.035em; }
+.navbar__link { font-size: 13px; font-weight: 500; padding-left: 13px; padding-right: 13px; }
+.navbar__link--active { color: var(--ifm-color-primary); }
+.navbar__search-input { background-color: var(--cn-hover); border: 1px solid var(--cn-border); font-size: 12px; border-radius: 8px; }
+.navbar__search-input::placeholder { color: var(--cn-muted); }
+.navbar kbd { color: var(--cn-muted); background: var(--cn-hover); border-color: var(--cn-border-hover); }
+.cn-search { display: contents; }
+.navbar .cn-search [data-cn-search-clear] { width: 28px; height: 28px; color: var(--cn-muted); border-radius: 5px; }
+.navbar .cn-search [data-cn-search-clear]:hover { color: var(--ifm-font-color-base); background: var(--cn-hover); }
+.navbar-sidebar { background: var(--ifm-background-color); }
+.footer { border-top: 1px solid var(--cn-border); padding: 42px 30px 24px; }
+.footer .container { max-width: 1160px; }
+.footer__title { font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.footer__item { font-size: 12px; line-height: 2.15; }
+.footer__copyright { text-align: left; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--cn-border); color: var(--cn-muted); font-size: 11px; }
+.menu { padding: 25px 15px !important; font-size: 13px; }
+.menu__link { border-radius: 6px; padding: 8px 12px; }
+.menu__list-item-collapsible > .menu__link { color: var(--ifm-font-color-base); font-size: 12px; font-weight: 650; }
+.menu__list .menu__list { padding-left: 9px; border-left: 1px solid var(--cn-border); margin: 5px 0 16px 12px; }
+.menu__link--active:not(.menu__link--sublist) { color: var(--ifm-color-primary); }
+.theme-doc-markdown { max-width: 790px; }
+.theme-doc-markdown h1 { font-size: 42px; line-height: 1.18; letter-spacing: -.04em; margin-bottom: 23px; }
+.theme-doc-markdown h2 { font-size: 25px; line-height: 1.3; letter-spacing: -.025em; margin-top: 42px; }
+.theme-doc-markdown h3 { font-size: 19px; letter-spacing: -.015em; }
+.theme-doc-markdown p, .theme-doc-markdown li { font-size: 15px; }
+.theme-doc-markdown > p:first-of-type { color: var(--cn-muted); font-size: 18px; line-height: 1.7; }
+.theme-doc-markdown img { border: 1px solid var(--cn-border); border-radius: 10px; height: auto; }
+.theme-doc-markdown table { font-size: 13px; width: 100%; display: block; overflow-x: auto; }
+.theme-doc-markdown table th, .theme-doc-markdown table td { border-left: none; border-right: none; padding: 12px 14px; }
+.theme-doc-markdown table tr { border-top: 1px solid var(--cn-border); }
+.theme-doc-markdown table tr:nth-child(2n) { background-color: var(--cn-hover); }
+.theme-doc-markdown blockquote { color: var(--cn-muted); font-size: 13px; border-left-color: var(--cn-border-hover); }
+.theme-doc-markdown mark, .breadcrumbs mark { background: var(--ifm-menu-color-background-active); color: var(--ifm-color-primary); border-radius: 3px; padding: 0 2px; }
+.theme-doc-markdown .alert { border: 1px solid var(--cn-border); border-left: 3px solid var(--ifm-alert-border-color); border-radius: 8px; font-size: 14px; box-shadow: none; }
+.theme-doc-markdown .alert p { font-size: 14px; }
+.theme-doc-breadcrumbs { margin-top: 12px; }
+.breadcrumbs__item { font-size: 11px; }
+.table-of-contents { font-size: 12px; line-height: 1.65; }
+.pagination-nav__link { border-color: var(--cn-border); padding: 18px; border-radius: 10px; }
+.pagination-nav__label { font-size: 14px; }
+.pagination-nav__sublabel { font-size: 11px; color: var(--cn-muted); }
+.theme-edit-this-page { font-size: 12px; }
+kbd { box-shadow: 0 2px 0 var(--cn-border); padding: 2px 6px; border: 1px solid var(--cn-border-hover); background: var(--cn-hover); font-size: .82em; }
+.doc-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 30px; }
+.doc-links a { display: inline-flex; align-items: center; min-height: 38px; padding: 5px 14px; border: 1px solid var(--cn-border); border-radius: 8px; font-size: 13px; font-weight: 600; background: var(--cn-surface); }
+.doc-links a:hover { border-color: var(--ifm-color-primary); text-decoration: none; }
+@media (max-width: 996px) { .navbar { padding: 0 16px; } .navbar__brand { margin-right: 10px; } }
+@media (max-width: 767px) { .theme-doc-markdown h1 { font-size: 34px; } .footer { padding: 32px 20px 20px; } .footer__col { margin-bottom: 24px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@media (prefers-reduced-transparency: reduce) { .navbar { backdrop-filter: none; background: var(--ifm-background-color); } }
+@media (prefers-contrast: more) { :root { --cn-muted: #414752; --cn-border: #828a96; } [data-theme='dark'] { --cn-muted: #d3d9e2; --cn-border: #737f8e; } }

@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.gitcatSidebar.category.Start here": {
+    "message": "Start here",
+    "description": "The label for category 'Start here' in sidebar 'gitcatSidebar'"
+  },
+  "sidebar.gitcatSidebar.category.Everyday Git": {
+    "message": "Everyday Git",
+    "description": "The label for category 'Everyday Git' in sidebar 'gitcatSidebar'"
+  },
+  "sidebar.gitcatSidebar.category.Make it yours": {
+    "message": "Make it yours",
+    "description": "The label for category 'Make it yours' in sidebar 'gitcatSidebar'"
+  },
+  "sidebar.gitcatSidebar.link.GitCat on GitHub ↗": {
+    "message": "GitCat on GitHub ↗",
+    "description": "The label for link 'GitCat on GitHub ↗' in sidebar 'gitcatSidebar', linking to 'https://github.com/catninth/gitcat'"
+  },
+  "sidebar.clipcatSidebar.category.Start here": {
+    "message": "Start here",
+    "description": "The label for category 'Start here' in sidebar 'clipcatSidebar'"
+  },
+  "sidebar.clipcatSidebar.category.Capture & save": {
+    "message": "Capture & save",
+    "description": "The label for category 'Capture & save' in sidebar 'clipcatSidebar'"
+  },
+  "sidebar.clipcatSidebar.category.Make it yours": {
+    "message": "Make it yours",
+    "description": "The label for category 'Make it yours' in sidebar 'clipcatSidebar'"
+  },
+  "sidebar.clipcatSidebar.link.ClipCat on GitHub ↗": {
+    "message": "ClipCat on GitHub ↗",
+    "description": "The label for link 'ClipCat on GitHub ↗' in sidebar 'clipcatSidebar', linking to 'https://github.com/catninth/clipcat'"
+  }
+}

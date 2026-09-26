@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Cat Ninth",
+    "description": "The title in the navbar"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.GitCat": {
+    "message": "GitCat",
+    "description": "Navbar item with label GitCat"
+  },
+  "item.label.ClipCat": {
+    "message": "ClipCat",
+    "description": "Navbar item with label ClipCat"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

@@ -1,0 +1,38 @@
+---
+title: Meet GitCat
+slug: /gitcat
+sidebar_label: Overview
+description: A visual Git workspace for repositories, commits, branches, and changes.
+---
+
+import Link from '@docusaurus/Link';
+
+Your repositories, branches, and changes in one clear workspace.
+
+GitCat is a desktop Git client. It puts a visual commit graph beside your branches and working files, so you can see what changed before deciding what to commit or share. It uses your system Git, including its configuration, hooks, signing, and existing credential setup.
+
+<div className="doc-links">
+  <Link to="/guides/gitcat/install">Install GitCat</Link>
+  <Link to="/guides/gitcat/first-repository">Open your first repository</Link>
+  <a href="https://github.com/catninth/gitcat">GitHub repository ↗</a>
+</div>
+
+![GitCat with repository tabs, branch sidebar, commit history, and staged and unstaged files.](/img/gitcat/workspace.png)
+
+## Find your way around
+
+- **Top tabs:** switch between repositories and organize them into groups.
+- **Left sidebar:** browse local branches, remote branches, and tags.
+- **Center graph:** follow commit history. Select **WIP** to return to uncommitted changes.
+- **Right panel:** inspect a commit or stage files and write your next commit.
+- **Toolbar:** pull, push, create a branch, stash changes, or restore the latest stash.
+
+Panels resize, hide, and remember their layout. Repository state refreshes when files or Git metadata change outside the application.
+
+## Your first useful workflow
+
+1. [Open or clone a repository](first-repository.md).
+2. [Review files and make a commit](changes-and-commits.md).
+3. [Pull and push changes](branches-and-remotes.md).
+
+Ready for more? Explore [diff views](history-and-diffs.md), [conflict resolution](conflicts.md), [GitHub integration](integrations.md), and [keyboard shortcuts](shortcuts.md).

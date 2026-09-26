@@ -1,0 +1,29 @@
+name: Documentation checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run write-translations -- --locale en --override
+      - name: Check translation catalog is up to date
+        run: |
+          git diff --exit-code -- i18n/en
+          test -z "$(git ls-files --others --exclude-standard i18n/en)"
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: documentation-site
+          path: build
