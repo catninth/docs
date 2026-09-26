@@ -59,25 +59,20 @@ const config: Config = {
     },
     footer: {
       links: [
-        {title: 'Get started', items: [
-          {label: 'GitCat guide', to: '/guides/gitcat'},
-          {label: 'ClipCat guide', to: '/guides/clipcat'},
+        {title: 'Cat Ninth', items: [
+          {label: 'Home', to: '/'},
+          {label: 'Cat Ninth on GitHub', href: 'https://github.com/catninth'},
+        ]},
+        {title: 'Explore', items: [
+          {label: 'Documentation', to: '/guides/welcome'},
           {label: 'Downloads & updates', to: '/guides/downloads'},
         ]},
-        {title: 'On GitHub', items: [
-          {label: 'Cat Ninth on GitHub', href: 'https://github.com/catninth'},
-          {label: 'GitCat repository', href: 'https://github.com/catninth/gitcat'},
-          {label: 'ClipCat repository', href: 'https://github.com/catninth/clipcat'},
+        {title: 'Community', items: [
+          {label: 'Get help & contribute', to: '/guides/help'},
           {label: 'Documentation source', href: 'https://github.com/catninth/docs'},
         ]},
-        {title: 'Keep in touch', items: [
-          {label: 'Get help & contribute', to: '/guides/help'},
-          {label: 'GitCat release notes', href: 'https://github.com/catninth/gitcat/releases'},
-          {label: 'ClipCat release notes', href: 'https://github.com/catninth/clipcat/releases'},
-          {label: 'Project licenses', to: '/guides/licenses'},
-        ]},
       ],
-      copyright: 'Cat Ninth · Focused tools, open development. Built with Docusaurus.',
+      copyright: 'Cat Ninth · Lightweight desktop tools. Local-first where possible, with development out in the open. Built with Docusaurus.',
     },
     docs: {sidebar: {hideable: true, autoCollapseCategories: true}},
     tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 3},

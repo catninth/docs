@@ -33,4 +33,12 @@ Autostart is enabled in clean default settings, but replay itself starts off unt
 
 ## Info and updates
 
-The **Info** section at the bottom includes the version, update check, license link, and GitHub repository link. **Install and restart** installs an available stable update. Finish recording or saving and preserve important replay content first. See [Downloads & updates](../downloads.md).
+The **Info** section at the bottom of **Settings** includes the version, update check, license link, and GitHub repository link. Select **Check for updates** to check manually, then choose **Install and restart** when ready.
+
+ClipCat also checks for stable releases automatically every six hours. Its updater ignores nightly releases, shows release notes, and verifies the signed package before installation.
+
+:::caution Save a replay before updating ClipCat
+Updating restarts ClipCat and clears its unsaved replay buffer. Save anything you want to keep first. Installation is blocked while a recording or clip save is active.
+:::
+
+On Linux, `.deb` and `.rpm` updates may prompt for system authorization through `pkexec`. AppImage updates replace the AppImage. Keep using the package format you installed.

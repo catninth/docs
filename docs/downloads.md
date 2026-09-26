@@ -12,30 +12,25 @@ Get installers from the project's official GitHub Releases page.
 
 ## Pick the right file
 
-Expand **Assets** on the release page.
+Expand **Assets** on the release page. Choose a package for your operating system and processor architecture. Available platforms and formats depend on the project; check its installation guide for requirements.
 
 | System | Package |
 | --- | --- |
-| Windows x64 | The file ending in `_x64-setup.exe` |
-| Debian / Ubuntu x86_64 | The `.deb` file |
-| Fedora / RPM-based Linux x86_64 | The `.rpm` file |
-| Other compatible Linux x86_64 | The `.AppImage` file |
+| Windows | An `.exe` installer |
+| Debian / Ubuntu | A `.deb` package |
+| Fedora / RPM-based Linux | An `.rpm` package |
+| Other compatible Linux distributions | An `.AppImage`, when provided |
 
-The `.sig` files and `latest.json` support the automatic updater. **Source code** archives are for development, not installers. Check [GitCat requirements](gitcat/install.md) or [ClipCat requirements](clipcat/install.md) before installing Linux packages.
+Files such as `.sig` and `latest.json` support automatic updaters; they are not installers. **Source code** archives are for building a project yourself. Install any required runtimes or system libraries listed in the project's guide.
 
 ## Update an installed app
 
-Both applications check GitHub for stable releases automatically and repeat checks every six hours. You choose when to install. The updater shows release notes, downloads a signed package, verifies it, and handles installation or restart.
+1. Read the new release notes for requirements or migration steps.
+2. Save your work and finish active tasks before installing or restarting.
+3. Use the app's built-in updater when available, following its guide. Otherwise, download the latest stable package and follow the project's installation instructions.
 
-- **GitCat:** use the update control in the application when an update is available. Finish any active repository operation first.
-- **ClipCat:** open **Settings**, scroll to **Info**, and select **Check for updates**. Choose **Install and restart** when ready.
-
-:::caution Save a replay before updating ClipCat
-Updating restarts ClipCat and clears its unsaved replay buffer. Save anything you want to keep first. Installation is blocked while a recording or clip save is active.
-:::
-
-On Linux, `.deb` and `.rpm` updates may prompt for system authorization through `pkexec`. AppImage updates replace the AppImage. Keep using the package format you installed.
+Keep the same package format and architecture unless the project provides instructions for switching. Package managers may ask for system authorization.
 
 ## Stable or nightly?
 
-Use the stable release for everyday work. A release named **nightly** is a development prerelease and can change between builds. The in-app updater ignores nightly releases.
+Use stable releases for everyday work. Releases marked **Pre-release**, including nightly builds, are intended for testing and may contain unfinished changes. Read their notes before installing and check the project's instructions for returning to a stable version.

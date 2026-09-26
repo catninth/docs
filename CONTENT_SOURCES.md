@@ -10,7 +10,7 @@ Queried the organization profile and all public repositories, current default-br
 - Public repositories: `gitcat`, `clipcat`, `cutcat`, `updater`, `.github`, and `docs`.
 - [GitCat 1.8.0](https://github.com/catninth/gitcat/releases/tag/v1.8.0), stable, published 2026-09-26. Windows x64 NSIS and Linux x86_64 AppImage/DEB/RPM, with signatures and `latest.json`.
 - [ClipCat 0.6.0](https://github.com/catninth/clipcat/releases/tag/v0.6.0), stable, published 2026-09-26. Same package formats.
-- GitCat GitHub license metadata identifies MPL-2.0. ClipCat metadata has no detected license; its README and Info button link to CutCat's MPL-2.0 file. This discrepancy is preserved on the license page rather than inventing a repository license.
+- GitCat GitHub license metadata identifies MPL-2.0. ClipCat metadata has no detected license; its README and Info button link to CutCat's MPL-2.0 file.
 
 ## GitCat evidence
 

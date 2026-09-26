@@ -1,7 +1,6 @@
 .main { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 48px; padding: 78px 0 86px; }
-.eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 650; letter-spacing: .14em; color: var(--cn-muted); margin: 0 0 25px; }
-.eyebrowLine { width: 22px; height: 2px; background: var(--ifm-color-primary); }
+.eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .14em; color: var(--cn-muted); margin: 0 0 25px; }
 .hero h1 { font-size: clamp(3.4rem, 5.5vw, 5.1rem); line-height: 1.04; letter-spacing: -.055em; font-weight: 680; margin: 0 0 25px; }
 .hero h1 span { color: var(--cn-muted); }
 .intro { max-width: 440px; color: var(--cn-muted); font-size: 17px; line-height: 1.7; margin-bottom: 29px; }

@@ -3,25 +3,18 @@ title: Get help & contribute
 description: Troubleshoot Cat Ninth applications, report useful bugs, and improve the guides.
 ---
 
-Start with the guide for the tool that needs attention.
-
-- [GitCat troubleshooting](gitcat/troubleshooting.md): authentication, missing repositories, locked files, and Git operations.
-- [ClipCat troubleshooting](clipcat/troubleshooting.md): capture, hotkeys, sound, saving, and updates.
+Start with the project's usage and troubleshooting guides. Check its README and release notes for requirements, known limitations, and recent fixes. You can find each project in the [Cat Ninth organization on GitHub](https://github.com/catninth).
 
 ## Report a problem
 
-Search existing issues, then open a new issue in the matching repository:
-
-- [GitCat issues](https://github.com/catninth/gitcat/issues)
-- [ClipCat issues](https://github.com/catninth/clipcat/issues)
-- [Documentation issues](https://github.com/catninth/docs/issues)
+Open the project's GitHub repository and select **Issues**. Search for an existing report before creating a new one. For mistakes in these guides, use [Documentation issues](https://github.com/catninth/docs/issues).
 
 Include your app version, operating system, installation format, the steps that trigger the problem, what you expected, and the exact error. A screenshot is useful when the problem is visual.
 
-For ClipCat, also include your GPU, codec, resolution, frame rate, buffer mode, and whether the problem affects replay, manual recording, or both. On Linux, mention X11 or Wayland.
+Add relevant settings, logs, or hardware details requested by the project's troubleshooting guide. Keep the steps short enough for someone else to repeat.
 
 :::tip Keep private information private
-Remove access tokens, personal repository URLs, private code, account details, and unrelated recordings from screenshots or logs before sharing them.
+Remove access tokens, passwords, private files, and personal information from screenshots or logs before sharing them.
 :::
 
 ## Improve a guide
@@ -30,4 +23,4 @@ Use **Edit this page** below any article to propose a correction on GitHub. Smal
 
 ## Work on the applications
 
-Development instructions live with the code: [GitCat README](https://github.com/catninth/gitcat#readme) and [ClipCat README](https://github.com/catninth/clipcat#readme). Building from source needs a development toolchain; using the published installers does not.
+Choose a repository from [Cat Ninth on GitHub](https://github.com/catninth), then read its README and any contribution instructions. Follow that project's setup and validation steps before opening a pull request. For a larger change, discuss the idea in an issue first.

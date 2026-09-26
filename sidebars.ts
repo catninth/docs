@@ -1,7 +1,7 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
-  communitySidebar: ['welcome', 'downloads', 'help', 'licenses'],
+  communitySidebar: ['welcome', 'downloads', 'help'],
   gitcatSidebar: [
     'gitcat/index',
     {type: 'category', label: 'Start here', collapsed: false, items: ['gitcat/install', 'gitcat/first-repository']},

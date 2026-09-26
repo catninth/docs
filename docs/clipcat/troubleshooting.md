@@ -39,6 +39,6 @@ Logs and runtime state are in `%LOCALAPPDATA%\ClipCat` on Windows, or `$XDG_STAT
 
 ## Update cannot proceed
 
-Stop manual recording and wait for clip saving to finish. Updates cannot install during those operations. Save any wanted replay content, then retry from **Settings > Info**. See [Updates](../downloads.md#update-an-installed-app).
+Stop manual recording and wait for clip saving to finish. Updates cannot install during those operations. Save any wanted replay content, then retry from **Settings > Info**. See [Info and updates](settings-and-shortcuts.md#info-and-updates).
 
 If the problem continues, [report it with your capture settings and platform details](../help.md#report-a-problem).

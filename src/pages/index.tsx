@@ -16,7 +16,7 @@ export default function Home(): ReactNode {
       <main className={styles.main}>
         <section className={styles.hero} aria-labelledby="home-heading">
           <div>
-            <p className={styles.eyebrow}><span className={styles.eyebrowLine} /><Translate id="home.eyebrow">CAT NINTH DOCUMENTATION</Translate></p>
+            <p className={styles.eyebrow}><Translate id="home.eyebrow">CAT NINTH DOCUMENTATION</Translate></p>
             <h1 id="home-heading"><Translate id="home.title.first">Less friction.</Translate><br /><span><Translate id="home.title.second">More flow.</Translate></span></h1>
             <p className={styles.intro}><Translate id="home.intro">Meet Cat Ninth. Lightweight desktop tools for your code, your clips, and your workflow.</Translate></p>
             <div className={styles.heroActions}>

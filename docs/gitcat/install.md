@@ -37,4 +37,10 @@ These commands set the default for all repositories. To set an identity for only
 
 For private repositories, either [connect a supported hosting service](integrations.md) or configure Git Credential Manager / your SSH agent. Rust and Node.js are only needed when building GitCat from source.
 
+## Updates
+
+GitCat checks for stable releases automatically every six hours and ignores nightly releases. Use the update control when an update is available to review the release notes and install the signed package. Finish any active repository operation first.
+
+On Linux, `.deb` and `.rpm` updates may prompt for system authorization through `pkexec`. AppImage updates replace the AppImage. Keep using the package format you installed.
+
 **Next:** [Open your first repository](first-repository.md).
