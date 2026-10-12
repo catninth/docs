@@ -5,7 +5,7 @@ const sidebars: SidebarsConfig = {
   gitcatSidebar: [
     'gitcat/index',
     {type: 'category', label: 'Start here', collapsed: false, items: ['gitcat/install', 'gitcat/first-repository']},
-    {type: 'category', label: 'Everyday Git', collapsed: false, items: ['gitcat/changes-and-commits', 'gitcat/branches-and-remotes', 'gitcat/history-and-diffs', 'gitcat/conflicts']},
+    {type: 'category', label: 'Everyday Git', collapsed: false, items: ['gitcat/changes-and-commits', 'gitcat/branches-and-remotes', 'gitcat/submodules', 'gitcat/history-and-diffs', 'gitcat/conflicts']},
     {type: 'category', label: 'Make it yours', collapsed: false, items: ['gitcat/integrations', 'gitcat/preferences', 'gitcat/shortcuts', 'gitcat/troubleshooting']},
     {type: 'link', label: 'GitCat on GitHub ↗', href: 'https://github.com/catninth/gitcat'},
   ],
