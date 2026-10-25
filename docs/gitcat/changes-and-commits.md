@@ -20,7 +20,12 @@ After success, the new commit appears in the graph. Unstaged edits remain in you
 
 ## File actions
 
-Right-click a changed file to stage or unstage it, copy its path, save a patch, stash that file, or add an ignore rule for the file, extension, or folder. **Path** and **Tree** switch the file-list layout.
+Right-click a changed file in either the staged or unstaged list to stage or unstage it, save a patch, stash that file, or add an ignore rule for the file, extension, or folder.
+
+- **Copy file path** copies the full absolute path, using your platform's path separators. For example, a file shown as `src/main.ts` in a Windows repository at `C:\Projects\example` copies as `C:\Projects\example\src\main.ts`.
+- **Show in Explorer** on Windows, or **Show in file manager** on Linux, reveals an existing file in its containing folder. This action is disabled for files marked as deleted.
+
+**Path** and **Tree** switch the file-list layout. In GitCat 1.13.0, status refreshes preserve your tree's scroll position and manually expanded or collapsed folders while the selected file stays the same.
 
 :::warning Discard removes uncommitted work
 Discarding a file or all changes removes the affected uncommitted content. Review the confirmation carefully. If you may need the edits later, commit them, save a patch, or stash them first.

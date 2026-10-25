@@ -71,7 +71,7 @@ The optional **Publish GitHub Pages** workflow is manually triggered and builds 
 
 ## Maintaining accuracy
 
-Review source and release notes together. The GitCat README contains old limitations that no longer match the current UI. Do not copy it verbatim. Current guides are checked against GitCat 1.8.0 and ClipCat 0.6.0; see `CONTENT_SOURCES.md` for the pinned commits and known differences.
+Review source and release notes together. Do not copy README limitations without checking the implementation. The October 25, 2026 review covers changes since docs commit `11244cc` (October 12), through GitCat 1.13.0 and ClipCat 0.8.1 plus its unreleased public-manifest updater fix. The original guide review was September 26; this update does not re-audit every earlier application change. See `CONTENT_SOURCES.md` for exact comparison ranges, evidence, and release boundaries.
 
 Use real application screenshots, include descriptive alt text, and identify preview/sample data. Do not turn simulated capture status into a claim of native recording verification.
 

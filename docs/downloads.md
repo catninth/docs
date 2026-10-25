@@ -23,6 +23,12 @@ Expand **Assets** on the release page. Choose a package for your operating syste
 
 Files such as `.sig` and `latest.json` support automatic updaters; they are not installers. **Source code** archives are for building a project yourself. Install any required runtimes or system libraries listed in the project's guide.
 
+## Package signatures and Windows publisher labels
+
+Both applications verify updater packages with Tauri/Minisign signatures. These signatures are separate from Windows Authenticode signing: the current release workflows do not sign the Windows executables or installers with an Authenticode certificate. **Cat Ninth** is publisher metadata, not a Windows-verified signing identity, so Windows may show an unknown-publisher or SmartScreen warning.
+
+Running a manually downloaded installer does not perform the application's built-in updater verification. See the [GitCat code-signing policy](https://github.com/catninth/gitcat/blob/main/CODE_SIGNING.md) and [ClipCat code-signing policy](https://github.com/catninth/clipcat/blob/main/CODE_SIGNING.md) for the documented signing process.
+
 ## Update an installed app
 
 1. Read the new release notes for requirements or migration steps.

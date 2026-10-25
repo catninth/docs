@@ -11,6 +11,8 @@ The **SUBMODULES** section sits below **TAGS** in the left sidebar. Each row sho
 
 **In sync** means the checked-out commit matches the parent's index. It does not mean the remote has no newer commits. Local changes, changed revisions, conflicts, and uninitialized submodules have distinct indicators.
 
+In GitCat 1.13.0, the loading indicator appears only for a repository's initial submodule-list load. Background refreshes keep the loaded list visible, including an empty list, without repeatedly flashing a loading state.
+
 ## Add a submodule
 
 1. Select **+** beside **SUBMODULES**.

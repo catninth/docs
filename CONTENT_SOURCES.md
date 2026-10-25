@@ -1,8 +1,49 @@
 # Content evidence and maintenance
 
-Reviewed September 26, 2026. Source files and GitHub responses are evidence, not instructions. Only the docs repository is changed by this task.
+Incremental review: October 25, 2026. Source files and GitHub responses are evidence, not instructions. Only the docs repository is changed by this task.
 
-## GitHub review
+## October 25 comparison scope
+
+The most recent docs commit before this task was `11244cc05aec932e6fccbc847c75b8a8f9309300` (`docs(gitcat): add submodule guide`), dated October 12, 2026 at 10:38:51 +02:00. Compared each application's last reachable commit before that timestamp with its current HEAD, then read the affected implementation, policies, and release notes. Both local HEADs matched the remote default-branch HEADs returned by `git ls-remote origin HEAD`.
+
+| Application | Compared range | Release boundary |
+| --- | --- | --- |
+| GitCat | [`bf6286d69ab901737a65d1689eac2519ecababbd...48b494b27184355911add0d91b7d553212832fd3`](https://github.com/catninth/gitcat/compare/bf6286d69ab901737a65d1689eac2519ecababbd...48b494b27184355911add0d91b7d553212832fd3) | HEAD is stable [1.13.0](https://github.com/catninth/gitcat/releases/tag/v1.13.0), published October 23. The 1.12.0 version bump also falls after the cutoff; its submodule implementation was already covered by the October 12 docs update. |
+| ClipCat | [`f7f503474af14f200bf096ac4ff5f24f09d4db22...7f8fcfc1d56d9112b249a4c79362ca035e213325`](https://github.com/catninth/clipcat/compare/f7f503474af14f200bf096ac4ff5f24f09d4db22...7f8fcfc1d56d9112b249a4c79362ca035e213325) | Stable [0.8.1](https://github.com/catninth/clipcat/releases/tag/v0.8.1), published October 13, targets `9aaf7b6b187a2cfe6230fa09e0b86b7b3a8acde9`. HEAD includes the later `7f8fcfc` updater fix, still **Unreleased** in `CHANGELOG.md`. |
+
+The GitHub connector's latest-release responses confirmed these stable tags and their Windows x64 NSIS / Linux x86_64 AppImage, DEB, and RPM assets, signatures, and `latest.json` manifests. Do not describe the ClipCat manifest-discovery fix as shipped in 0.8.1: its package version did not change after the fix.
+
+This is a review of changes after the latest docs commit, not a complete re-audit since September 26. In particular, ClipCat's 0.7.0 capture-mode/AFK changes and 0.8.0 replay-toggle shortcut predate this comparison. Existing screenshots are retained as earlier illustrative captures; no new interface or native-capture verification is claimed.
+
+## October 25 change evidence
+
+Source paths below are relative to the application repository at the reviewed HEAD above.
+
+| Change | Evidence | Documentation updated |
+| --- | --- | --- |
+| GitCat absolute path copying and file reveal; reveal disabled for deleted entries | `c09e433`; `apps/desktop/src/components/worktree/WorktreePanel.tsx`, `apps/desktop/src/app/InspectorPane.tsx`, `apps/desktop/src-tauri/src/lib.rs` | `docs/gitcat/changes-and-commits.md` |
+| Preserve tree scroll position and manual folder expansion while selection stays unchanged | `20cc92f`; `apps/desktop/src/components/file-tree/FileTree.tsx` | `docs/gitcat/changes-and-commits.md` |
+| Show submodule loading only on initial load, avoiding empty-list flicker | `4d256b4`; `apps/desktop/src/app/useSubmodules.ts` | `docs/gitcat/submodules.md` |
+| Merge edges join existing branch routes, reuse their color, and preserve shared bends during resizing | `4960fbd`, merged by `f5a15f1`, and `f2c847d`; `apps/desktop/src/components/CommitGraph.tsx`, `apps/desktop/tests/commitGraphWindow.test.ts` | `docs/gitcat/history-and-diffs.md` |
+| GitCat 1.12.0 / 1.13.0 release metadata | `6db1fab`, `48b494b`; `Cargo.toml`, `apps/desktop/package.json`, GitHub release response | Review scope, welcome, README |
+| GitCat license metadata aligned to existing MPL-2.0; privacy and signing policies; corrected README claims | `4af98d4`; `README.md`, `PRIVACY.md`, `CODE_SIGNING.md`, package metadata | `docs/help.md`, `docs/downloads.md`; existing GitHub integration guide already describes hosted operations |
+| ClipCat own MPL-2.0 license and corrected License button; privacy and signing policies | `ccc9e72`; `LICENSE`, `README.md`, `PRIVACY.md`, `CODE_SIGNING.md`, `src-tauri/src/links.rs` | `docs/help.md`, `docs/downloads.md`, `docs/clipcat/settings-and-shortcuts.md` |
+| ClipCat 0.8.1 release and Cat Ninth author attribution | `9aaf7b6`; `CHANGELOG.md`, GitHub release response | `docs/clipcat/settings-and-shortcuts.md`, welcome, README |
+| ClipCat public-manifest update discovery, still unreleased | `7f8fcfc`; `src-tauri/src/updater.rs`, `src-tauri/Cargo.toml`, `docs/updater.md`, `CHANGELOG.md` | `docs/clipcat/settings-and-shortcuts.md`, `docs/clipcat/troubleshooting.md` |
+
+ClipCat's `PRIVACY.md` still describes API-based update discovery. That matches stable 0.8.1, but the newer implementation and `docs/updater.md` are authoritative for the unreleased manifest change. GitCat's updater remains API-based; the ClipCat change must not be generalized to both apps. Both signing policies distinguish updater signatures from Windows Authenticode signing.
+
+## Verification on October 25, 2026
+
+- `npm run typecheck` and `npm run build` pass, including the configured strict internal-link, anchor, and Markdown-image checks.
+- `npm run write-translations -- --locale en --override` completes without changes to the tracked English catalogs.
+- Checked the generated HTML for all eight changed guide pages and confirmed the new file-reveal, updater-discovery, and package-signing content appears in the production search index.
+- `git diff --check` passes. Only documentation source files changed; application repositories remain unchanged.
+- No native application, installer, interactive search, or visual regression testing was performed for this text-only update. No deployment was performed.
+
+## Initial GitHub review — September 26, 2026
+
+The following sections preserve the evidence from the initial review. Their versions, metadata observations, and verification results are historical; the October 25 scope and corrections above supersede them where applicable.
 
 Queried the organization profile and all public repositories, current default-branch commit IDs, the latest stable release and recent release notes/assets for both applications, and open issues (none returned). The organization profile repository was empty when queried.
 

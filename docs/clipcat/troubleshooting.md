@@ -41,4 +41,6 @@ Logs and runtime state are in `%LOCALAPPDATA%\ClipCat` on Windows, or `$XDG_STAT
 
 Stop manual recording and wait for clip saving to finish. Updates cannot install during those operations. Save any wanted replay content, then retry from **Settings > Info**. See [Info and updates](settings-and-shortcuts.md#info-and-updates).
 
+If **Check for updates** fails with a GitHub API rate-limit error in ClipCat 0.8.1, open the [official stable release page](https://github.com/catninth/clipcat/releases/latest) and download the matching package manually. The public-manifest update check fixes this in newer source, but remains unreleased as of October 25, 2026; reinstalling 0.8.1 does not add it.
+
 If the problem continues, [report it with your capture settings and platform details](../help.md#report-a-problem).

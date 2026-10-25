@@ -17,6 +17,17 @@ Add relevant settings, logs, or hardware details requested by the project's trou
 Remove access tokens, passwords, private files, and personal information from screenshots or logs before sharing them.
 :::
 
+## Privacy and licenses
+
+Both projects now publish privacy notices and code-signing policies alongside their source. Their own source code is licensed under MPL-2.0; third-party components retain their own licenses and notices.
+
+| Application | Privacy notice | License |
+| --- | --- | --- |
+| GitCat | [Local data, credentials, network requests, and controls](https://github.com/catninth/gitcat/blob/main/PRIVACY.md) | [GitCat license](https://github.com/catninth/gitcat/blob/main/LICENSE) |
+| ClipCat | [Recording data, storage, network requests, and controls](https://github.com/catninth/clipcat/blob/main/PRIVACY.md) | [ClipCat license](https://github.com/catninth/clipcat/blob/main/LICENSE) |
+
+Local processing does not mean no network activity. GitCat contacts configured Git hosts and services used by enabled features; both apps check for updates automatically. See [package signatures](downloads.md#package-signatures-and-windows-publisher-labels) for the distinction between updater verification and Windows publisher identity.
+
 ## Improve a guide
 
 Use **Edit this page** below any article to propose a correction on GitHub. Small fixes, clearer examples, and updated screenshots are welcome. The [documentation README](https://github.com/catninth/docs#readme) explains local development and the Docusaurus translation workflow.

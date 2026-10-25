@@ -35,7 +35,13 @@ Autostart is enabled in clean default settings, but replay itself starts off unt
 
 The **Info** section at the bottom of **Settings** includes the version, update check, license link, and GitHub repository link. Select **Check for updates** to check manually, then choose **Install and restart** when ready.
 
-ClipCat also checks for stable releases automatically every six hours. Its updater ignores nightly releases, shows release notes, and verifies the signed package before installation.
+Since ClipCat 0.8.1, **License** opens [ClipCat's own MPL-2.0 license](https://github.com/catninth/clipcat/blob/main/LICENSE). The author name is **Cat Ninth**.
+
+ClipCat also checks for stable releases about 20 seconds after startup, then every six hours. Its updater ignores nightly releases, shows release notes, and verifies the package's updater signature before installation.
+
+:::note Update discovery after 0.8.1
+As of October 25, 2026, stable ClipCat 0.8.1 still checks GitHub's release API. A newer source change reads the public `latest.json` release asset instead, avoiding that API's shared rate limit and showing release notes from the manifest. This fix is marked **Unreleased** and is not included in the 0.8.1 installer. If update discovery fails in an installed stable version, use the [manual download instructions](../downloads.md#update-an-installed-app).
+:::
 
 :::caution Save a replay before updating ClipCat
 Updating restarts ClipCat and clears its unsaved replay buffer. Save anything you want to keep first. Installation is blocked while a recording or clip save is active.

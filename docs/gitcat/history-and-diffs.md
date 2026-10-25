@@ -9,6 +9,8 @@ Follow how a project changed, then inspect the exact files behind a commit.
 
 Each row represents a commit; colored lanes connect its history. Labels identify branches and tags. **WIP** represents uncommitted work connected to the current HEAD, not a saved commit.
 
+Merge connections join the existing first-parent branch route and reuse its color. GitCat 1.13.0 fixes connections that appeared to pass through unrelated commits and preserves shared bends when resizing the graph column. These are display fixes; they do not change repository history.
+
 Select a commit to see its message, author, time, parents, statistics, and changed files. Click its SHA to copy the full commit ID. Use the graph column controls to adjust which details are visible.
 
 **Ctrl+F** searches commit subjects and full message bodies. Matching rows stay highlighted while other history dims. Load older commits when you need to look further back.
