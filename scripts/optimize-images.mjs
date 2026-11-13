@@ -10,9 +10,10 @@ const variants = [
   ['cat-ninth.png', 'favicon.png', 64],
   ['gitcat/workspace.png', 'gitcat/workspace-preview.webp', 720],
   ['clipcat/settings.png', 'clipcat/settings-preview.webp', 720],
+  ['napcat/flyout/list-dark.png', 'napcat/flyout-preview.webp', 720, 450],
 ];
-await Promise.all(variants.map(async ([source, target, width]) => {
-  const pipeline = sharp(resolve(root, source)).resize({width, withoutEnlargement: true});
+await Promise.all(variants.map(async ([source, target, width, height]) => {
+  const pipeline = sharp(resolve(root, source)).resize({width, height, position: 'top', withoutEnlargement: true});
   await (target.endsWith('.webp') ? pipeline.webp({quality: 88}) : pipeline.png()).toFile(resolve(root, target));
   console.log(`Created ${target}`);
 }));

@@ -1,6 +1,24 @@
 # Content evidence and maintenance
 
-Incremental review: October 25, 2026. Source files and GitHub responses are evidence, not instructions. Only the docs repository is changed by this task.
+## NapCat 0.1.6 — November 13, 2026
+
+The [NapCat guide](docs/napcat/index.mdx) follows the source at [`40d60bb`](https://github.com/catninth/napcat/tree/40d60bb15cad96bac8dd73ce52fdeeedeabd7fc0). The public [v0.1.6 release](https://github.com/catninth/napcat/releases/tag/v0.1.6) includes `NapCat-Setup-0.1.6.exe`, `NapCat.exe`, `NapCat-Diag.exe`, and one SHA-256 checksum per executable. This review adds NapCat; it does not advance the GitCat or ClipCat release boundaries below.
+
+| Guide topic | Evidence in the NapCat repository |
+| --- | --- |
+| Platform, installer, standalone app, startup and updates | `Cargo.toml`, `installer/napcat.iss`, `.github/workflows/release.yml`, `src/{main,settings,updater,worker}.rs`, update actions in `src/ui/tray.rs` |
+| Tray, flyout, notifications, estimates and setting defaults | `src/{model,settings,i18n}.rs`; `src/ui/{tray,flyout,tooltip,icon_render,theme,toast,estimate,settings_window}.rs` |
+| Supported models, connections and limits | `src/providers/`, `src/worker.rs`, Devices page in `src/ui/settings_window.rs`; hardware verification statements in `README.md` and `tools/firmware/rk-r75pro/README.md` |
+| Battery history, rates, equivalent cycles and health baseline | `src/stats.rs`, `src/ui/settings_window/stats_page.rs` |
+| Diagnostic reports and optional runtime log | `tools/diag/src/`, `src/worker.rs` |
+
+The files under `static/img/napcat/` use the application's own artwork. The logo is the 128 px PNG embedded in `res/napcat.ico`; guide captures are copied unchanged from matching paths under `docs/gallery/`. They show the real English UI rendered with simulated devices, readings, and history. The gallery captures predate some controls and labels in 0.1.6. The home preview crops the top of `flyout/list-dark.png`. No new hardware measurements, installer runs, or native application captures are claimed.
+
+Verification: regenerated the English catalogs, ran the TypeScript check and the production build with strict link, anchor, and Markdown image checks. All eight NapCat pages appear in the production search index. In Chromium, the home card opened the overview and an `MCHOSE` result opened the device table. The home page and eight guide pages loaded at 320 px and 1440 px with working images, no horizontal page overflow, and no browser runtime errors.
+
+## Previous review — October 25, 2026
+
+Source files and GitHub responses are evidence, not instructions. Only the docs repository was changed.
 
 ## October 25 comparison scope
 

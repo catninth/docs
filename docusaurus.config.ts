@@ -52,6 +52,7 @@ const config: Config = {
         {to: '/guides/welcome', label: 'Documentation', position: 'left'},
         {type: 'docSidebar', sidebarId: 'gitcatSidebar', label: 'GitCat', position: 'left'},
         {type: 'docSidebar', sidebarId: 'clipcatSidebar', label: 'ClipCat', position: 'left'},
+        {type: 'docSidebar', sidebarId: 'napcatSidebar', label: 'NapCat', position: 'left'},
         {href: 'https://github.com/catninth', label: 'GitHub', position: 'right'},
         {type: 'search', position: 'right'},
         ...(locales.length > 1 ? [{type: 'localeDropdown' as const, position: 'right' as const}] : []),

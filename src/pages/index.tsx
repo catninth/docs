@@ -4,7 +4,7 @@ import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import Translate, {translate} from '@docusaurus/Translate';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import {IconArrowRight, IconArrowUpRight, IconBook2, IconBrandGithub, IconDownload, IconKeyboard, IconLifebuoy} from '@tabler/icons-react';
+import {IconArrowRight, IconArrowUpRight, IconBattery, IconBook2, IconBrandGithub, IconDownload, IconKeyboard, IconLifebuoy} from '@tabler/icons-react';
 import styles from './index.module.css';
 
 function Arrow() { return <IconArrowRight size={18} stroke={1.7} aria-hidden="true" />; }
@@ -12,13 +12,13 @@ function Arrow() { return <IconArrowRight size={18} stroke={1.7} aria-hidden="tr
 export default function Home(): ReactNode {
   return (
     <Layout title={translate({id: 'home.meta.title', message: 'Desktop tools, documented'})}
-      description={translate({id: 'home.meta.description', message: 'Get to know Cat Ninth. Practical guides for GitCat, the visual Git client, and ClipCat, the replay and recording tool.'})}>
+      description={translate({id: 'home.meta.description', message: 'Practical guides to GitCat for Git, ClipCat for screen recording, and NapCat for checking device batteries on Windows.'})}>
       <main className={styles.main}>
         <section className={styles.hero} aria-labelledby="home-heading">
           <div>
             <p className={styles.eyebrow}><Translate id="home.eyebrow">CAT NINTH DOCUMENTATION</Translate></p>
             <h1 id="home-heading"><Translate id="home.title.first">Less friction.</Translate><br /><span><Translate id="home.title.second">More flow.</Translate></span></h1>
-            <p className={styles.intro}><Translate id="home.intro">Meet Cat Ninth. Lightweight desktop tools for your code, your clips, and your workflow.</Translate></p>
+            <p className={styles.intro}><Translate id="home.intro">Meet Cat Ninth. Lightweight desktop tools for your code, your clips, and your wireless devices.</Translate></p>
             <div className={styles.heroActions}>
               <Link className={styles.primaryButton} to="#projects"><Translate id="home.explore">Explore the guides</Translate><Arrow /></Link>
               <Link className={styles.textButton} href="https://github.com/catninth"><IconBrandGithub size={19} stroke={1.7} aria-hidden="true" /><Translate id="home.github">Find us on GitHub</Translate></Link>
@@ -69,6 +69,23 @@ export default function Home(): ReactNode {
               </Link>
               <div className={styles.projectFoot}><span><Translate id="home.platforms">Windows & Linux</Translate></span><Link href="https://github.com/catninth/clipcat/releases/latest"><Translate id="home.download">Download</Translate><IconArrowUpRight size={15} aria-hidden="true" /></Link></div>
             </article>
+            <article className={styles.project}>
+              <div className={styles.projectBody}>
+                <div className={styles.projectTitle}>
+                  <img src={useBaseUrl('/img/napcat/logo.png')} alt="" width="44" height="44" />
+                  <div><h3>NapCat</h3><span><Translate id="home.napcat.category">Device batteries in your tray</Translate></span></div>
+                </div>
+                <p><Translate id="home.napcat.description">Check which device needs charging, get a low-battery alert, and see how long a charge usually lasts.</Translate></p>
+                <div className={styles.projectActions}>
+                  <Link className={styles.guideLink} to="/guides/napcat"><Translate id="home.napcat.guide">Get to know NapCat</Translate><Arrow /></Link>
+                  <Link className={styles.repoLink} href="https://github.com/catninth/napcat" aria-label={translate({id: 'home.napcat.repository', message: 'NapCat GitHub repository'})}><IconBrandGithub size={20} stroke={1.7} aria-hidden="true" /></Link>
+                </div>
+              </div>
+              <Link to="/guides/napcat/tray-and-flyout" className={styles.screenshotLink}>
+                <img src={useBaseUrl('/img/napcat/flyout-preview.webp')} width="720" height="450" loading="lazy" alt={translate({id: 'home.napcat.screenshot', message: 'Explore the NapCat tray panel: two sample mice report 50% remaining and 64% charging, with a low keyboard battery alert above them'})} />
+              </Link>
+              <div className={styles.projectFoot}><span><Translate id="home.napcat.platform">Windows 10 & 11</Translate></span><Link href="https://github.com/catninth/napcat/releases/latest"><Translate id="home.download">Download</Translate><IconArrowUpRight size={15} aria-hidden="true" /></Link></div>
+            </article>
           </div>
         </section>
 
@@ -78,6 +95,7 @@ export default function Home(): ReactNode {
             <Link to="/guides/downloads"><IconDownload size={21} stroke={1.6} aria-hidden="true" /><div><strong><Translate id="home.quick.downloads">Install your next tool</Translate></strong><span><Translate id="home.quick.downloads.detail">Packages, platforms, and keeping up to date</Translate></span></div><Arrow /></Link>
             <Link to="/guides/gitcat/first-repository"><IconBook2 size={21} stroke={1.6} aria-hidden="true" /><div><strong><Translate id="home.quick.repository">Open your first repository</Translate></strong><span><Translate id="home.quick.repository.detail">From opening a folder to your first commit</Translate></span></div><Arrow /></Link>
             <Link to="/guides/clipcat/first-clip"><IconKeyboard size={21} stroke={1.6} aria-hidden="true" /><div><strong><Translate id="home.quick.clip">Save your first clip</Translate></strong><span><Translate id="home.quick.clip.detail">Set up replay and catch the next moment</Translate></span></div><Arrow /></Link>
+            <Link to="/guides/napcat/first-run"><IconBattery size={21} stroke={1.6} aria-hidden="true" /><div><strong><Translate id="home.quick.battery">Check your first device</Translate></strong><span><Translate id="home.quick.battery.detail">Find your mouse, keyboard, headset, or controller in the Windows tray</Translate></span></div><Arrow /></Link>
             <Link to="/guides/help"><IconLifebuoy size={21} stroke={1.6} aria-hidden="true" /><div><strong><Translate id="home.quick.help">Find a little help</Translate></strong><span><Translate id="home.quick.help.detail">Troubleshooting, bug reports, and contributions</Translate></span></div><Arrow /></Link>
           </div>
         </section>

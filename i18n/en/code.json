@@ -3,7 +3,7 @@
     "message": "Desktop tools, documented"
   },
   "home.meta.description": {
-    "message": "Get to know Cat Ninth. Practical guides for GitCat, the visual Git client, and ClipCat, the replay and recording tool."
+    "message": "Practical guides to GitCat for Git, ClipCat for screen recording, and NapCat for checking device batteries on Windows."
   },
   "home.eyebrow": {
     "message": "CAT NINTH DOCUMENTATION"
@@ -15,7 +15,7 @@
     "message": "More flow."
   },
   "home.intro": {
-    "message": "Meet Cat Ninth. Lightweight desktop tools for your code, your clips, and your workflow."
+    "message": "Meet Cat Ninth. Lightweight desktop tools for your code, your clips, and your wireless devices."
   },
   "home.explore": {
     "message": "Explore the guides"
@@ -474,5 +474,29 @@
   },
   "search.results": {
     "message": "Search results"
+  },
+  "home.napcat.category": {
+    "message": "Device batteries in your tray"
+  },
+  "home.napcat.description": {
+    "message": "Check which device needs charging, get a low-battery alert, and see how long a charge usually lasts."
+  },
+  "home.napcat.guide": {
+    "message": "Get to know NapCat"
+  },
+  "home.napcat.repository": {
+    "message": "NapCat GitHub repository"
+  },
+  "home.napcat.screenshot": {
+    "message": "Explore the NapCat tray panel: two sample mice report 50% remaining and 64% charging, with a low keyboard battery alert above them"
+  },
+  "home.napcat.platform": {
+    "message": "Windows 10 & 11"
+  },
+  "home.quick.battery": {
+    "message": "Check your first device"
+  },
+  "home.quick.battery.detail": {
+    "message": "Find your mouse, keyboard, headset, or controller in the Windows tray"
   }
 }

@@ -1,0 +1,33 @@
+---
+title: Meet NapCat
+slug: /napcat
+sidebar_label: Overview
+description: Check wireless device batteries from the Windows tray, get charging alerts, and read your battery history.
+---
+
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+NapCat shows the batteries of your mice, keyboards, headsets, and controllers in the Windows notification area. Hover over a tray icon for a quick reading, or click it to see which device needs charging.
+
+<div className="doc-links">
+  <Link to="/guides/napcat/install">Install NapCat</Link>
+  <Link to="/guides/napcat/first-run">Check your first device</Link>
+  <a href="https://github.com/catninth/napcat">GitHub repository ↗</a>
+</div>
+
+<img src={useBaseUrl('/img/napcat/flyout/grid-dark.png')} width="380" height="485" alt="NapCat's grid shows six sample devices: a charging mouse at 64%, a keyboard at 9%, a headset with no reading, and a disconnected controller among them." />
+
+*In this gallery example, the keyboard needs charging first. The dash on the headset means its level is unknown. The dashed ring on the controller means it is disconnected. The devices and readings are simulated.*
+
+## What would you like to do?
+
+| Task | Where to start |
+| --- | --- |
+| Keep one icon per device, or show only the most urgent one | [Use the tray and flyout](tray-and-flyout.md) |
+| Find out whether your receiver, cable, or Bluetooth connection reports a level | [Check device support](devices.md) |
+| Change when Windows warns you, or keep alerts quiet during a game | [Adjust settings and notifications](settings.md) |
+| See how fast a battery drains and how much runtime to expect | [Read battery history](battery-history.md) |
+| Find a missing icon or work out why a percentage is unavailable | [Troubleshoot NapCat](troubleshooting.md) |
+
+NapCat runs on Windows 10 and 11. It can show a percentage only when the device or Windows supplies a battery reading. Adding an unsupported USB device by hand lets you track its connection; it does not unlock battery readings.

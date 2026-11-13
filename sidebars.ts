@@ -16,5 +16,12 @@ const sidebars: SidebarsConfig = {
     {type: 'category', label: 'Make it yours', collapsed: false, items: ['clipcat/settings-and-shortcuts', 'clipcat/troubleshooting']},
     {type: 'link', label: 'ClipCat on GitHub ↗', href: 'https://github.com/catninth/clipcat'},
   ],
+  napcatSidebar: [
+    'napcat/index',
+    {type: 'category', label: 'Start here', collapsed: false, items: ['napcat/install', 'napcat/first-run']},
+    {type: 'category', label: 'Monitor your devices', collapsed: false, items: ['napcat/tray-and-flyout', 'napcat/devices', 'napcat/battery-history']},
+    {type: 'category', label: 'Make it yours', collapsed: false, items: ['napcat/settings', 'napcat/troubleshooting']},
+    {type: 'link', label: 'NapCat on GitHub ↗', href: 'https://github.com/catninth/napcat'},
+  ],
 };
 export default sidebars;

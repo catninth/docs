@@ -1,6 +1,6 @@
 # Cat Ninth documentation
 
-A Docusaurus 3 site for [Cat Ninth](https://github.com/catninth), with task-based English guides for GitCat and ClipCat. Includes local search, responsive navigation, dark/light themes, authentic interface captures, and Docusaurus i18n catalogs.
+A Docusaurus 3 site for [Cat Ninth](https://github.com/catninth), with task-based English guides for GitCat, ClipCat, and NapCat. Includes local search, responsive navigation, dark/light themes, authentic interface captures, and Docusaurus i18n catalogs.
 
 ## Local development
 
@@ -23,7 +23,7 @@ Builds fail on broken internal links, Markdown images, and anchors. CI checks Ty
 
 ## Content map
 
-- `docs/`: English documentation, divided into organization, GitCat, and ClipCat guides.
+- `docs/`: English documentation, divided into organization, GitCat, ClipCat, and NapCat guides.
 - `src/pages/index.tsx`: organization home page; all custom UI copy uses `Translate` / `translate`.
 - `src/css/custom.css`: shared Docusaurus / Infima theme tokens and documentation styling.
 - `src/pages/index.module.css`: home page layout.
@@ -71,7 +71,7 @@ The optional **Publish GitHub Pages** workflow is manually triggered and builds 
 
 ## Maintaining accuracy
 
-Review source and release notes together. Do not copy README limitations without checking the implementation. The October 25, 2026 review covers changes since docs commit `11244cc` (October 12), through GitCat 1.13.0 and ClipCat 0.8.1 plus its unreleased public-manifest updater fix. The original guide review was September 26; this update does not re-audit every earlier application change. See `CONTENT_SOURCES.md` for exact comparison ranges, evidence, and release boundaries.
+Review source and release notes together. Do not copy README limitations without checking the implementation. The November 13, 2026 review adds [NapCat 0.1.6](docs/napcat/index.mdx), including device support by connection, tray behavior, alerts, and battery history. The October 25 review covers GitCat 1.13.0 and ClipCat 0.8.1 plus its unreleased public-manifest updater fix. See [Content evidence and maintenance](CONTENT_SOURCES.md) for the reviewed revisions, release assets, and screenshot provenance.
 
 Use real application screenshots, include descriptive alt text, and identify preview/sample data. Do not turn simulated capture status into a claim of native recording verification.
 

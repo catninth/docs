@@ -9,6 +9,7 @@ Get installers from the project's official GitHub Releases page.
 | --- | --- | --- |
 | GitCat | [Latest stable release](https://github.com/catninth/gitcat/releases/latest) | [All GitCat releases](https://github.com/catninth/gitcat/releases) |
 | ClipCat | [Latest stable release](https://github.com/catninth/clipcat/releases/latest) | [All ClipCat releases](https://github.com/catninth/clipcat/releases) |
+| NapCat | [Latest stable release](https://github.com/catninth/napcat/releases/latest) | [All NapCat releases](https://github.com/catninth/napcat/releases) |
 
 ## Pick the right file
 
@@ -23,11 +24,15 @@ Expand **Assets** on the release page. Choose a package for your operating syste
 
 Files such as `.sig` and `latest.json` support automatic updaters; they are not installers. **Source code** archives are for building a project yourself. Install any required runtimes or system libraries listed in the project's guide.
 
+**NapCat is Windows-only.** Choose `NapCat-Setup-<version>.exe` for a per-user installation, or `NapCat.exe` to run it directly. `NapCat-Diag.exe` is a separate diagnostic tool. See [Install NapCat](napcat/install.md) for the differences.
+
 ## Package signatures and Windows publisher labels
 
-Both applications verify updater packages with Tauri/Minisign signatures. These signatures are separate from Windows Authenticode signing: the current release workflows do not sign the Windows executables or installers with an Authenticode certificate. **Cat Ninth** is publisher metadata, not a Windows-verified signing identity, so Windows may show an unknown-publisher or SmartScreen warning.
+GitCat and ClipCat verify updater packages with Tauri/Minisign signatures. These signatures are separate from Windows Authenticode signing: their reviewed release workflows do not sign the Windows executables or installers with an Authenticode certificate. **Cat Ninth** is publisher metadata, not a Windows-verified signing identity, so Windows may show an unknown-publisher or SmartScreen warning.
 
 Running a manually downloaded installer does not perform the application's built-in updater verification. See the [GitCat code-signing policy](https://github.com/catninth/gitcat/blob/main/CODE_SIGNING.md) and [ClipCat code-signing policy](https://github.com/catninth/clipcat/blob/main/CODE_SIGNING.md) for the documented signing process.
+
+NapCat's updater instead verifies the downloaded installer against the SHA-256 checksum published alongside it on GitHub Releases. A matching checksum is not a publisher signature. The [NapCat installation guide](napcat/install.md) explains update modes and manual checks.
 
 ## Update an installed app
 
